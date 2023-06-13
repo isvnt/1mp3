@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "ruddy";
+    src: url(../ruddy.ttf);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EEE9D9;
+  }
+  
+  header {
+  
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+    
+    
+  }
+
+  nav a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  font-size: 20px;
+  display: flex;
+  gap: 80px;
+  
+    
+    
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+    font-family: "ruddy";
+    
+    
+    
+    
+  }
+
+  h1 {
+    margin-top: 164px;
+    width: 60%;
+    color: #2D2E83;
+   align-items: center;
+   justify-content: center;
+    display: flex;
+  text-align: center;
+    font-size: 78px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "ruddy";
+  }
+  
+  button {
+    margin-top: 70px;
+    padding: 19px 75px;
+    background-color: #2D2E83;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "ruddy";
+  }
+  
+  .hand {
+    position: absolute;
+width: 306px;
+height: 300.43px;
+left: -44.57px;
+top: 460.29px;
+
+transform: rotate(-6.65deg);
+    position: absolute;
+  }
+
+  .hand2 img{
+    
+    position: absolute;
+    width: 306px;
+    height: 300.43px;
+right: 0px;
+    top: 20.2px;
+    
+  }
+
+ 
+  .main{
+    margin-left: 5%;
+  }
+  .main h2{
+    margin-top: 300px;
+    font-size: 40px;
+    font-family: "ruddy";
+    color: #2D2E83;
+  }
+
+  .main p{
+    width: 35%;
+    font-size: 18px;
+    font-family: "ruddy";
+    color: black;
+  }
