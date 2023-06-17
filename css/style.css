@@ -3,15 +3,21 @@
     src: url(../ruddy.ttf);
 }
 
+*{
+  scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
     background-color: #EEE9D9;
+    
+   
+    
   }
   
   header {
-  
+  position: relative;
     padding: 20px;
     text-align: center;
     
@@ -21,6 +27,8 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    display: flex;
+    
     
     
     
@@ -30,22 +38,30 @@ body {
     text-decoration: none;
     list-style: none;
     color: black;
+    display: flex;
+    
+    
   }
+  
   
   nav ul {
     list-style-type: none;
   font-size: 20px;
   display: flex;
   gap: 80px;
+  display: flex;
+  
   
     
     
   }
   
   nav ul li {
-    display: inline;
+    display: flex;
+    
     margin-right: 10px;
     font-family: "ruddy";
+    
     
     
     
@@ -72,9 +88,18 @@ body {
     background-color: #2D2E83;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 2.5px solid #2D2E83;
     font-size: 16px;
     font-family: "ruddy";
+  }
+
+  button:hover{
+    background-color: #EEE9D9;
+    border: 2.5px solid #2D2E83;
+border-radius: 10px;
+color: #2D2E83;
+transition:  0.2s ease-in;
   }
   
   .hand {
@@ -93,25 +118,332 @@ transform: rotate(-6.65deg);
     position: absolute;
     width: 306px;
     height: 300.43px;
-right: 0px;
+  right: 0px;
     top: 20.2px;
     
   }
 
- 
-  .main{
-    margin-left: 5%;
-  }
+ .main{
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  
+ }
   .main h2{
     margin-top: 300px;
     font-size: 40px;
     font-family: "ruddy";
     color: #2D2E83;
+    
+    
   }
 
   .main p{
-    width: 35%;
+    width: 48%;
     font-size: 18px;
     font-family: "ruddy";
     color: black;
   }
+
+  .stats {
+    width: 100%;
+   text-align: center;
+    
+  }
+
+  #fh{
+    margin-top: 100px;
+    font-size: 25px;
+  }
+
+  .femmes p{
+    width: 380px;
+    
+  }
+
+  
+.femmes{ display: flex;
+  align-items: center;
+  justify-content: space-between;}
+
+  .femmes h2{
+    font-size: 20px;
+  }
+  
+  .femmes img{
+    margin-top: 90px;
+    width: 370px;
+  }
+  
+  .barre{
+    width: 230px;
+    height: 40px;
+    background-color: #2D2E83;
+    transform: rotate(90deg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    border-radius: 30px;
+    
+    display: flex;
+    z-index: 1;
+    position: relative;
+    
+    
+}
+
+.myChart{
+    z-index: 4;
+    position: relative;
+}
+
+.parent{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin:50px 0;
+    
+  }
+
+#titlepann{
+  font-size: 25px;
+  
+  
+  
+  
+}
+
+#wrapper{
+  position:relative;
+  top: 30px;
+  left: -50px;
+  
+}
+.par img{
+  position: absolute;
+ }
+
+ .lieux h2 {
+  font-size: 25px;
+ }
+ .lieux{
+
+    margin-top: -60px;
+    
+   
+   
+
+  
+ }
+ .lieux img {
+ display: flex;
+ margin-left: auto;
+ margin-right: auto;
+ 
+}
+
+
+.temoins{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+  margin-top: 60px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+   
+  
+.temoins h2{
+  font-size: 25px;
+}
+
+#txt{
+  width: 400px;
+}
+
+#txtt{
+  text-align: right;
+  width: 400px;
+}
+.temoins img{
+
+  margin: 50px;
+  width: 450px;
+  justify-content: space-between;
+  height: auto;
+  
+}
+
+
+
+
+.roue{
+  margin-top: 70px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.roue img{
+  width: 370px; /* Spécifie la largeur souhaitée */
+  height: auto;
+}
+
+.accordion-wrapper{
+  margin-top: -100px;
+}
+h1{
+  text-align:center;
+}
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+
+  width: 600px;
+  margin:0 auto;
+}
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #2D2E83;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "ruddy";
+}
+
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: rgba(4,57,94,1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  
+}
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 18px;
+  font-family: "ruddy";
+}
+
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+
+#buttonfin{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+ margin-top: 130px;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  font-family: "ruddy";
+}
+
+@media (max-width: 890px) {
+  .femmes{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  .accordion-wrapper{
+    width: 450px;
+  }
+
+  
+  .hand{
+    display: none;
+  }
+  .hand2{
+    display: none;
+  }
+
+  nav ul{
+    gap: 50px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1{
+    
+    font-size: 70px;
+  }
+
+  .lieux{
+    display: none;
+  }
+
+  .main h2{
+    text-align: center;
+  }
+
+  .main p{
+    width: 430px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .titlepann h2{
+    width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+ 

@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js"></script>
+    
 </head>
 <body>
       <header>
         <nav>
           <ul>
-            <li><a href="#">Explication</a></li>
-            <li><a href="#">Statistiques</a></li>
-            <li><a href="#">Contacter</a></li>
+            <li><a href="#mainencre">Explication</a></li>
+            <li><a href="#statsencre">Statistiques</a></li>
+            <li><a href="#contactencre">Contacter</a></li>
           </ul>
         </nav>
         <div class="title">
@@ -28,14 +30,246 @@
         <button>Découvrir</button>
       </header>
 
+      <div id="mainencre"></div>
       <section class="main">
-        <h2>Explication</h2>
+        
+        <h2 id="main">Explication</h2>
+        
         <p>Le harcèlement de rue c’est lorsqu’une personne dit ou fait des choses déplacées à une autre personne dans les lieux publics. Comme par exemple la suivre, la siffler ou la toucher alors que l’autre personne n’est pas d’accord. Le harcèlement de rue est interdit et ne devrait jamais arriver. Tout le monde a le droit d’être respecté et de se sentir en sécurité dans la rue.</p>
+      
+        
+      <section>
+        <div id="statsencre"></div>
+      <div id="statistiques">
+        
+        <h2 class="stats">Statistiques</h2>
+      </div>
+      
+      <h2 id="fh">Proportion de femmes et hommes victimes du harcèlement de rue : </h2>
 
+      <div class="femmes">
+        
+        <img src="img/Graphique SVG-02.png" alt="">
+        <div>
+        <p>VICTIMES : 81% de femmes.
+        
+
+        </p>
+        <p>AUTEURS : 85% des auteurs sont masculins 
+        </p>
+      
+       
+        <p>  
+          Seulement 20% semblent avoir été aidées</p>
+
+        
+      </div>
+      </div>
       </section>
 
+      <h2 id="titlepann">
+        Pourcentage des formes de harcèlement sexuels subits par des femmes dans la rue
+    </h2>
+
+   
+<div class="parent">
+  
+    <div class="par">
+      <div id="wrapper">
+        <div id="chartContainer" style="height: 10px; width: 100%;"></div>
+        <img id = "userImg" src="img/Graphique SVG-04.svg" style="height: 300px; width: auto;">
+      </div>
+        <canvas class="myChart">
+          
+        </canvas>
+        
+        <div class="barre"></div>
+        
+        
+    </div>
     
+  
+
     
+
+
+</div>
+
+
+            
     
+
+
+
+
+
+
+
+<script>
+// On déclare les datas :
+// le label + sa donnée
+// On peut configurer aussi l'apparance
+const data = {
+    labels: ['regard insistant', 'rien'],
+    datasets: [{
+        
+        data: [68, 32],
+        fill: true,
+        backgroundColor: ['#2D2E83', '#FFFF'],
+       
+        
+        hoverBackgroundColor: [
+                '#2D2E83', '#FFFF',
+                
+            ],
+      
+        tension: 0.10 // La fluidité de la ligne
+    }
+    ]
+};
+
+// On configure notre chart
+const config = {
+  type: 'doughnut',
+  data: data,
+  options: {
+    cutout: 78,
+    aspectRatio: 1.1,
+    responsive: true,
+    plugins: {
+      centerImage: {
+        image: document.getElementById('centerImage'),
+      },
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+      },
+    },
+  },
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// On affiche le chart dans l'élément avec l'ID correspondant
+var myChart = new Chart(
+  document.getElementsByClassName('myChart'),
+  config
+);
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<section class="lieux">
+  <h2>Lieu de harcèlement :
+  </h2>
+  <p>pourcentage en fonction des lieux (parcs, transports)
+  </p>
+  <p>Les régions qui enregistrent le plus d’infractions d’outrages sexistes sont les Hauts-de-France, l’Île-de-France et la région Provence-Alpes-Côte d’Azur.  </p>
+  
+
+  <div class="lieux">
+    <img src="img/Fichier 2@300x.png" alt="">
+    <div>
+      
+    </div>
+    <img src="img/Fichier 3@300x.png" alt="">
+  </div>
+  </section>
+
+
+      
+
+      
+<section class="temoins">
+  <h2>Être témoin de harcèlement de rue :
+  </h2>
+<div class="temoins">
+<img src="img/Fichier 7@300x.png" alt="">
+<p id="txt">86% des gens ne savent pas comment réagir lorsqu’ils/elles sont témoins de harcèlement 
+</p>
+<p id="txtt">76% des personnes ont déjà été témoins de harcèlement sexuel dans les espaces publics 
+</p>
+<img src="img/Fichier 8@300x.png" alt="">
+</div>
+</section>
+    
+
+    
+<section class="roue">
+<div class="roue">
+  <img src="img/camemebert_1.gif" alt="">
+  
+</div>
+</section>
+
+<h2>À savoir</h2>
+
+
+  
+</section>
+
+<div id="contactencre"></div>
+
+
+<div class="accordion-wrapper">
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check1" checked>
+    <label class="accordion-label" for="check1">Contravention Harcèlement</label>
+    <div class="accordion-content">
+      <p>il est possible de constater et de verbaliser le harcèlement de rue
+
+        L’outrage sexiste, contravention prévue à l’article 621-1 du code pénal, a été créé par la loi n°2018-703 du 3 août 2018. Il consiste dans le fait d’imposer à une personne tout propos ou comportement à connotation sexuelle ou sexiste qui soit porte atteinte à sa dignité en raison de son caractère dégradant ou humiliant, soit créé à son encontre une situation intimidante, hostile ou offensante.
+        </p>
+    </div>
+  </div>
+  <div class="accordion">
+    <input type="radio" name="radio-a" id="check2">
+    <label class="accordion-label" for="check2">Qui contacter ?</label>
+    <div class="accordion-content">
+      <p>Victime d'harcèlement ?
+        Veuillez contacter les numéros suivants :
+        Enfance en danger : 119 /
+        Violence femmes info : 3919 /
+        Par sms si vous ne pouvez pas parler : 114 /
+        En cas d’urgence : 17
+      </p>
+    </div>
+  
+    
+  
+  
+</div>
+<button id="buttonfin">Faire un don</button>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2023 Campus fonderie de l'image. Tous droits réservés.</p>
+  </div>
+</footer>
+
 </body>
 </html>
